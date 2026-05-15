@@ -15,4 +15,4 @@ public interface ReviewRepository extends JpaRepository<Review, Integer> {
 
     List<Review> findByPackageNameContainingIgnoreCaseOrCustomerNameContainingIgnoreCaseOrderByReviewDateAsc(String packageName, String customerName);
 }
-// Developed by IT25102712
+// Developed by IT25102712 senula
