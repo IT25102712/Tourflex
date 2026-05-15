@@ -11,7 +11,9 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     Optional<User> findByEmail(String email);
 
-    // "Email or Phone" login
+    // Email login
     @Query("SELECT u FROM User u WHERE u.email = :identifier OR u.phone = :identifier")
     Optional<User> findByIdentifier(@Param("identifier") String identifier);
 }
+
+// Developed by IT25100815 ( Simra Ameen)
