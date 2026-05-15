@@ -18,4 +18,6 @@ public interface BookingRepository extends JpaRepository<Booking, Integer> {
     List<Booking> findActiveBookingsByEmail(@Param("email") String email);
 
     List<Booking> findByCustomerEmail(String customerEmail);
+    //Developed by IT25102073
+
 }
