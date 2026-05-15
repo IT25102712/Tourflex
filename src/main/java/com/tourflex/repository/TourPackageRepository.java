@@ -6,3 +6,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface TourPackageRepository extends JpaRepository<TourPackage, Integer> {
     TourPackage findByName(String name);
 }
+//Developed by IT25102503
