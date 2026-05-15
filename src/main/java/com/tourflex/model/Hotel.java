@@ -51,3 +51,4 @@ public class Hotel {
         this.starRating = starRating;
     }
 }
+//updated by IT25103118
