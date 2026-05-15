@@ -119,5 +119,5 @@ public class ReviewController {
         reviewService.saveReview(review);
         return "redirect:/review/add-page";
     }
-    // Developed by IT25102712
+    // Developed by IT25102712 senula
 }
