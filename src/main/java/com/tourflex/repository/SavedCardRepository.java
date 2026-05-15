@@ -8,3 +8,4 @@ import java.util.List;
 public interface SavedCardRepository extends JpaRepository<SavedCard, Integer> {
     List<SavedCard> findByCustomerEmail(String customerEmail);
 }
+//Developed by IT25101484
