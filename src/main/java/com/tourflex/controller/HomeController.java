@@ -23,6 +23,7 @@ public class HomeController {
     @Autowired
     private TourPackageRepository tourPackageRepository;
 
+    //popular packages - most booked
     @GetMapping("/")
     public String homePage(Model model) {
         List<String> topPackageNames = bookingService.getTopBookedPackageNames();
@@ -35,7 +36,7 @@ public class HomeController {
             }
         }
 
-        // If not enough booked packages, show all available packages
+        // show 4 popular
         if (popularPackages.size() < 4) {
             List<TourPackage> allPackages = tourPackageRepository.findAll();
             for (TourPackage pkg : allPackages) {
@@ -47,7 +48,7 @@ public class HomeController {
 
         model.addAttribute("popularPackages", popularPackages);
 
-        // Pass all unique locations for search autocomplete
+        // search bar unique sort - X duplicate
         List<String> locations = tourPackageRepository.findAll().stream()
                 .map(TourPackage::getLocation)
                 .distinct()
@@ -58,7 +59,7 @@ public class HomeController {
         return "home";
     }
 
-    // REST API for live search suggestions
+    // search bar tour cards
     @GetMapping("/api/search-packages")
     @ResponseBody
     public List<TourPackage> searchPackages(
@@ -75,7 +76,7 @@ public class HomeController {
                 .collect(Collectors.toList());
     }
 
-    // REST API for location suggestions
+    // drop down suggestion
     @GetMapping("/api/locations")
     @ResponseBody
     public List<String> getLocations(@RequestParam(required = false, defaultValue = "") String q) {

@@ -42,7 +42,7 @@ public class UserService {
     private UserRepository userRepository;
 
     public User login(String email, String password) {
-        // 1. Find the user
+        // find the user
         Optional<User> userOptional = userRepository.findByEmail(email);
 
         if (userOptional.isPresent()) {
@@ -53,7 +53,7 @@ public class UserService {
             }
         }
 
-        return null; // Return null if user not found or password wrong
+        return null; // user not found or password wrong
     }
 }
 
