@@ -56,3 +56,5 @@ public class UserService {
         return null; // Return null if user not found or password wrong
     }
 }
+
+// Developed by IT25100815 ( Simra Ameen)
