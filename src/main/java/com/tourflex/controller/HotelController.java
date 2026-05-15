@@ -70,3 +70,4 @@ public class HotelController {
         return hotelService.getHotelsByLocation(location);
     }
 }
+//updated by IT25103118
