@@ -196,3 +196,4 @@ public class DataLoader implements CommandLineRunner {
         hotelRepository.save(hotel);
     }
 }
+//updated by IT25103118
