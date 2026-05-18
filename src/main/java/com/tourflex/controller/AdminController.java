@@ -91,7 +91,7 @@ public class AdminController {
         return "admin-dashboard";
     }
 
-    // Admin: View all users (kept for direct link access)
+    // view user
     @GetMapping("/users")
     public String showUsers(Model model, HttpSession session) {
         if (session.getAttribute("admin") == null) {
@@ -101,6 +101,7 @@ public class AdminController {
         return "admin-users";
     }
 
+    // user dlt
     @GetMapping("/users/delete/{id}")
     public String deleteUser(@PathVariable int id, HttpSession session) {
         if (session.getAttribute("admin") == null) {
@@ -119,10 +120,12 @@ public class AdminController {
         return "redirect:/admin/dashboard?tab=reviews";
     }
 
-    // ADMIN LOGOUT - redirects to admin login page
+    // redirect admin login
     @GetMapping("/logout")
     public String logout(HttpSession session) {
         session.removeAttribute("admin");
         return "redirect:/admin/login";
     }
+    //Developed by IT25102073
+
 }
