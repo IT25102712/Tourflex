@@ -105,4 +105,6 @@ public class PaymentController {
         model.addAttribute("payments", paymentService.getAllPayments());
         return "payment-list";
     }
+
+    //Developed by IT25101484
 }
