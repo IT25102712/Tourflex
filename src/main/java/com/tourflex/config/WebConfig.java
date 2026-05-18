@@ -19,4 +19,5 @@ public class WebConfig implements WebMvcConfigurer {
                 .addResourceLocations("file:" + uploadPath + "/")
                 .addResourceLocations("classpath:/static/images/");
     }
+    //Updated by IT25102073
 }
